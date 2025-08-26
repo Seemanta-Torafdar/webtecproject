@@ -1,0 +1,120 @@
+/* General Body */
+body {
+  font-family: Arial, sans-serif;
+  background: #e5e8eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 800px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Login Box */
+.login-box, .admin-box {
+  padding: 40px;
+  flex: 1;
+}
+
+.login-box {
+  background: #fff;
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/* Input Box */
+.input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.input-box label {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  background: #009ee0;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background: #007bbf;
+}
+
+/* Forgot Password Link */
+.forgot {
+  display: inline-block;
+  margin-left: 10px;
+  color: #009ee0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot:hover {
+  color: red;
+}
+
+/* Admin Box */
+.admin-box {
+  background: #009ee0;
+  color: #fff;
+}
+
+.admin-box h2 {
+  margin-bottom: 15px;
+}
+
+.admin-box p {
+  margin-bottom: 20px;
+}
+
+/* Error and Success Messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.success {
+  color: green;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
