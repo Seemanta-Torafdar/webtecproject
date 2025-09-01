@@ -7,53 +7,44 @@ $success = false;
 // Run validation when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // --- Validate Username ---
-    if (empty($_POST["username"]))
-       {
-        $usernameErr = "Username is required";
-       } 
-       
-       else  
-       {
-        $username = test_input($_POST["username"]);
-        if (!preg_match("/^[a-zA-Z]+$/", $username)) 
-          {
-            $usernameErr = "Username Muste Be letter";
-          }
-       }
+  // --- Validate Username ---
+  if (empty($_POST["username"])) {
+    $usernameErr = "Username is required";
+  } else {
+    $username = test_input($_POST["username"]);
+    if (!preg_match("/^[a-zA-Z]+$/", $username)) {
+      $usernameErr = "Username Muste Be letter";
+    }
+  }
 
-    // --- Validate Password ---
-    if (empty($_POST["password"]))
-       {
-        $passwordErr = "password is required";
-       } 
-       
-       else 
-        {
-        $password = test_input($_POST["password"]);
-        if (!preg_match("/^[0-9]+$/", $password)) 
-          {
-            $passwordErr = "Password Must Be 8 Digit ";
-          }
-        }
+  // --- Validate Password ---
+  if (empty($_POST["password"])) {
+    $passwordErr = "password is required";
+  } else {
+    $password = test_input($_POST["password"]);
+    if (!preg_match("/^[0-9]+$/", $password)) {
+      $passwordErr = "Password Must Be 8 Digit ";
+    }
+  }
 
-    // --- If no errors ---
-    if (empty($usernameErr) && empty($passwordErr)) 
-      {
-        $success = true;
-      }
+  // --- If no errors ---
+  if (empty($usernameErr) && empty($passwordErr)) {
+    $success = true;
+  }
 }
 
 // Function to sanitize inputs
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+function test_input($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,16 +52,19 @@ function test_input($data) {
   <link rel="stylesheet" href="../CSS/login.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-  <?php if($success): ?>
-    <script>alert('Login Successful!');</script>
+  <?php if ($success): ?>
+    <script>
+      alert('Login Successful!');
+    </script>
   <?php endif; ?>
 
   <div class="container">
     <div class="login-box">
       <h2>Login</h2>
       <p>Sign In to your account</p>
-      
+
       <form method="post" action="">
         <div class="input-box">
           <label for="username"><i class="bi bi-person"></i></label>
@@ -94,9 +88,10 @@ function test_input($data) {
       <p>Hello Welcome To Registration. Hello Welcome To Registration. Hello Welcome To Registration. Hello Welcome To Registration.
         Hello Welcome To Registration.Hello Welcome To Registration.Hello Welcome To Registration.Hello Welcome To Registration.
       </p>
-      <a href="registration.php">  <button class="btn">Register Now!</button></a>
+      <a href="registration.php"> <button class="btn">Register Now!</button></a>
 
     </div>
   </div>
 </body>
+
 </html>
