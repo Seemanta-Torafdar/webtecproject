@@ -18,7 +18,7 @@
     <!-- Registration As box with buttons inside -->
     <div class="title-box">
       <h2>Registration As</h2>
-      <button class="choice-btn teacher"><i class="fa-solid fa-person-chalkboard"></i><a href="../Login/regs.php">Teacher</button>
+      <button class="choice-btn teacher"><i class="fa-solid fa-person-chalkboard"></i><a href="../Login/regt.php">Teacher</button>
 
       <button class="choice-btn student"><i class="bi bi-mortarboard"></i><a href="../Login/regs.php"> Student</button>
 
