@@ -1,0 +1,124 @@
+ body /* Main page  */
+    {
+      font-family: Arial, sans-serif; /* Default font */
+      margin: 0; /* Remove default margin */
+      background: whitesmoke; 
+    }
+
+    
+    .header /* Header styling */
+    {
+      background: #0077cc; 
+      color: white;
+      padding: 15px 20px;
+      display: flex; /* Flex layout for logo + menu */
+      justify-content: space-between; /* Space between logo and menu */
+      align-items: center;
+    }
+
+   
+    .logo  /* Logo section */
+    {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; /* Rounded logo */
+    }
+
+    
+    .top-btn /* Top-right menu buttons  home profile  logout */
+    {
+      list-style: none; /* Remove bullet points */
+      display: flex;
+      gap: 15px; /* Space between menu items */
+      margin: 0;
+      padding: 0;
+    }
+    .top-btn a {
+      color: white;
+      text-decoration: none; /* Remove underline */
+      font-size: 14px;
+    }
+    .top-btn a:hover {
+      text-decoration: underline; 
+    }
+
+    
+    .container /* Container for sidebar + main content */
+    {
+      display: flex; 
+    }
+
+  
+    .sidebar   /* Sidebar menu */
+     {
+      width: 220px; /* Fixed sidebar width */
+      background: white;
+      min-height: 100vh; /* Full height */
+      border-right: 1px solid #0077cc; /* Border separation */
+      padding: 20px;
+    }
+    
+    .menu /* Sidebar buttons */
+     {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: #0077cc;
+      color: white;
+      border: none;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px black;
+    }
+    .menu:hover {
+      background: #005fa3; 
+    }
+
+    
+    .main-content/* Main content area */
+    {
+      flex: 1; /* Take remaining space */
+      padding: 25px;
+    }
+
+    
+    .card  /* Card for content blocks */
+     {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px black;
+    }
+    .card h3 {
+      margin: 0 0 10px 0; /* Space below heading */
+      color: #0077cc;
+    }
+
+   
+    table /* Table styling */
+     {
+      width: 100%;
+      border-collapse: collapse; /* Merge table borders */
+      border: 5px solid #0077cc;
+     }
+    th, td {
+      border: 2px solid;
+      padding: 12px;
+      font-size: 14px;
+      text-align: left;
+    }
+    th {
+      background: #0077cc; /* Header color */
+      color: white;
+      font-weight: bold;
+    }

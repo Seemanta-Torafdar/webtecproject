@@ -99,7 +99,7 @@ function test_input($data)
 
 
 
-        <button type="submit" class="btn">Confirm Your New Password </button>
+         <button type="submit" class="btn">Confirm Your New Password </button>
    
       </form>
     </div>
