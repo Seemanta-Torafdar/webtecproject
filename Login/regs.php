@@ -56,7 +56,7 @@
             
             // Run query and check for success
             if ($db->query($sql) === TRUE) {
-                echo "<script>alert('New record created successfully'); window.location.href = 'https://www.google.com';</script>";
+                echo "<script>alert('New record created successfully'); window.location.href = '../Login/login.php';</script>";
             } else {
                 $successMsg = "<p class='error'>Error: " . $sql . "<br>" . $db->error . "</p>";
             }
@@ -92,7 +92,7 @@
 
       <!-- Phone Number -->
       <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" value="<?php echo isset($phone) ? $phone : ''; ?>" required placeholder="(+880) 1745678901">
+      <input type="text" id="phone" name="phone" value="<?php echo isset($phone) ? $phone : ''; ?>" required placeholder=" (01745678901)">
       <span class="error"><?php echo $phoneErr; ?></span>
 
       <!-- Email -->

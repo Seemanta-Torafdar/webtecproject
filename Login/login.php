@@ -1,16 +1,19 @@
 <?php
 // Initialize variables
-$username = $password = "";
-$usernameErr = $passwordErr = "";
+$username = $password = "";  
+$usernameErr = $passwordErr = ""; 
 $success = false;
 
 // Run validation when form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+  {
 
   // --- Validate Username ---
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
-  } else {
+  } 
+  else
+    {
     $username = test_input($_POST["username"]);
     if (!preg_match("/^[a-zA-Z]+$/", $username)) {
       $usernameErr = "Username Muste Be letter";
@@ -18,9 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // --- Validate Password ---
- if (empty($_POST["password"])) {
+  if (empty($_POST["password"])) 
+    {
     $passwordErr = "Password is required";
-  } else {
+  } 
+  else 
+  {
     $password = test_input($_POST["password"]);
     if (strlen($password) < 6) {
       $passwordErr = "Password must be at least 6 characters";
@@ -28,8 +34,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // --- If no errors ---
-  if (empty($usernameErr) && empty($passwordErr)) {
-    $success = true;
+  if (empty($usernameErr) && empty($passwordErr)) 
+  { 
+    //connect database 
+    $conn= new mysqli("localhost", "root","","webtechproject");
+     if($conn->connect_error)
+     {
+      die("connection failed" . $coon->connect_error);
+     } 
+     $sqlStudent ="SELECT * FROM students WHERE `name`= '$username' AND `password`='$password'";
+     $resultStudent = $conn->query($sqlStudent); // Execute the SQL query student exists with the username and password  is stored in $resultStudent.
+
+
+
+     var_dump($result);
+
+     if($resultStudent && $resultStudent->num_rows> 0)  //Check if a student with the entered username and password exists
+     {
+       //  If match → Alert 
+       echo "<script>
+       alert('Login Successful!');
+       window.location.href='../student/student.php';
+       </script>";
+       exit;
+
+     }
+     //  Check teachers table
+    $sqlTeacher = "SELECT * FROM teachers WHERE `name` = '$username' AND `password` = '$password'";
+    $resultTeacher = $conn->query($sqlTeacher); //Execute the SQL query teacher exists with the username and password  is stored in $resultTeaher.
+
+    if ($resultTeacher && $resultTeacher->num_rows > 0)  //Check if a teacher with the entered username and password exists
+      {
+        // Teacher login successful
+        echo "<script>
+                alert('Login Successful as Teacher!');
+                window.location.href='../teacher/teacher.php';
+              </script>";
+        exit;
+    }
+    else
+    {
+      $passwordErr= "Invalid password";
+      $usernameErr= "Invalid username";
+  
+    } 
+    $conn->close();
+     
   }
 }
 
