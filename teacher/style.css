@@ -1,0 +1,109 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+}
+.header {
+  background: #0077cc;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.top-nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.top-nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 220px;
+  background: white;
+  min-height: 100vh;
+  border-right: 1px solid #0077cc;
+  padding: 20px;
+}
+.menu {
+  display: block;
+  padding: 12px;
+  margin: 8px 0;
+  text-align: left;
+  background: #0077cc;
+  color: white;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu:hover {
+  background: #005fa3;
+}
+.main-content {
+  flex: 1;
+  padding: 25px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+.form-group {
+  margin-bottom: 12px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.btn-save {
+  background: #0077cc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-save:hover {
+  background: #005fa3;
+}
+.message {
+  background: #e6f7e6;
+  padding: 10px;
+  border-left: 5px solid #28a745;
+  margin-bottom: 15px;
+}
