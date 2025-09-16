@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $usernameErr = "Username must contain only letters";
     }
   }
+}
 
   // --- Validate Password ---
   if (empty($_POST["password"])) {
@@ -39,9 +40,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // --- If no errors ---
   if (empty($usernameErr) && empty($passwordErr) && empty($cpasswordErr)) {
-    $success = true;
+   // $success = true;
+   $conn= new mysqli("localhost", "root","","webtechproject");
+     if($conn->connect_error)
+     {
+      die("connection failed" . $coon->connect_error);
+     }
+     $usertype=$_POST["USERTYPE"];
+     $sql="UPDATE $usertype SET password='$password'WHERE name= '$username'";
+      
+
+
+
+     var_dump($result);
+
+     if($resultStudent && $resultStudent->num_rows> 0)  //Check if a student with the entered username and password exists
+     {
+       //  If match → Alert 
+       echo "<script>
+       alert('Login Successful!');
+       window.location.href='../student/student.php';
+       </script>";
+       exit;
+
+     }
   }
-}
+
 
 // Function to sanitize inputs
 function test_input($data)
@@ -68,6 +92,8 @@ function test_input($data)
   <?php if ($success): ?>
     <script>
       alert('Password Change Successful!');
+      window.location.href="../Login/login.php";
+      
     </script>
   <?php endif; ?>
 

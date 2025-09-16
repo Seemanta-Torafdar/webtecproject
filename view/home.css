@@ -37,12 +37,11 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-.firstpart {
-  text-align: center;
-  padding: 100px 20px;
+ .firstpart { 
+  text-align: center; 
+  padding: 100px 20px; 
   background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-  color: white;
-}
+   color: white; }
 
 .firstpart h1 {
   font-size: 50px;
@@ -50,7 +49,7 @@ nav ul li a:hover {
 }
 
 .firstpart p {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 25px;
 }
 
@@ -59,7 +58,7 @@ nav ul li a:hover {
 /* Notice Section */
 
 .notice {/* Notice Background */
-  background: #f9f9f9;
+  background: white;
   padding: 50px 20px;
   text-align: center;
 }
@@ -78,7 +77,7 @@ nav ul li a:hover {
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
-  font-size: 1rem;
+  font-size: 20px;
   transition: transform 0.3s;
   
  
@@ -87,7 +86,7 @@ nav ul li a:hover {
 
 .notice .notice-btn:hover {
     transform: translateY(-10px);
-  background: #007bb8;
+  background:  #009ee0;
 }
 
 .notice p {
@@ -135,7 +134,7 @@ nav ul li a:hover {
 }
 
 .card p {
-  color: #1a1a1a; /* Text color */
+  color:black; /* Text color */
 }
 
 /* Footer */

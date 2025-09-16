@@ -12,12 +12,12 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo"> 🏫 Welcome to KCI</div>
+        <div class="logo">  Welcome to KCI</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="../Login/login.php">Login</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +36,7 @@
         <button class="notice-btn">View More Notices</button>
 
         <br><br>
-        <p>👉 Admission for the new academic year starts from <b>15th September 2025</b>.
+        <p> Admission for the new academic year starts from <b>15th September 2025</b>.
             Please contact the school office for more details.</p>
     </section>
 

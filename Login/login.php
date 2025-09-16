@@ -8,7 +8,7 @@ $success = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
 
-  // --- Validate Username ---
+  //  Validate Username 
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
   } 
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
   }
 
-  // --- Validate Password ---
+  //  Validate Password 
   if (empty($_POST["password"])) 
     {
     $passwordErr = "Password is required";
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
   }
 
-  // --- If no errors ---
+  // If no errors 
   if (empty($usernameErr) && empty($passwordErr)) 
   { 
     //connect database 
